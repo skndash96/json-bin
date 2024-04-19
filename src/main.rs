@@ -23,7 +23,6 @@ pub mod lib {
 
 pub mod error;
 
-
 use routes::{
     add_user,
     api::{add_json, get_json, hello},

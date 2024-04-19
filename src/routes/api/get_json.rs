@@ -1,8 +1,9 @@
 use actix_web::{ get, web, HttpMessage, HttpRequest, HttpResponse, Responder };
 use crate::error::CustomError;
-use crate::lib::schema::{Bin, UserID, Value};
+use crate::lib::schema::{Bin, UserID};
 use mongodb::Client;
 use mongodb::bson::doc;
+use serde_json::Value;
 
 #[derive(serde::Deserialize)]
 struct GetJSONOptions {

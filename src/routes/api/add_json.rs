@@ -1,6 +1,7 @@
 use actix_web::{ post, web, HttpMessage, HttpRequest, HttpResponse, Responder };
-use crate::{error::CustomError, lib::schema::{Bin, UserID, Value}};
+use crate::{error::CustomError, lib::schema::{Bin, UserID}};
 use mongodb::{bson::to_document, Client};
+use serde_json::Value;
 
 /// Add JSON
 /// Path: /api/add-json

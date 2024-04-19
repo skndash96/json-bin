@@ -1,5 +1,4 @@
-use serde_json::Number;
-use std::collections::HashMap;
+use serde_json::Value;
 
 #[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
 pub struct User {
@@ -29,16 +28,4 @@ impl Bin {
             owner: uid
         }
     }}
-}
-
-//Deserialize dynamic JSON
-#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
-#[serde(untagged)]
-pub enum Value {
-    Null,
-    Bool(bool),
-    Number(Number),
-    String(String),
-    Array(Vec<Value>),
-    Object(HashMap<String, Value>),
 }
